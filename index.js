@@ -2,7 +2,6 @@ const request =  require ('request');
 const argv = require('yargs').argv;
 
 
-let apiKey = '5eb496365af244e0fb985ce93ebedd65';
 // let city = 'portland';
 let city = argv.c || 'paris';
 
