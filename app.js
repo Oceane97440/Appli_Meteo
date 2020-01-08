@@ -17,6 +17,8 @@ app.get('/', function (req, res) {
 app.post('/', function (req, res) {
   let city = req.body.city;
   let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
+ // pour code postal api.openweathermap.org/data/2.5/weather?zip={zip code}, {country code}
+
 
   request(url, function (err, response, body) {
     if(err){
@@ -33,7 +35,7 @@ app.post('/', function (req, res) {
   });
 })
 
-app.listen(3000, function () {
+app.listen(3001, function () {
   console.log('Connexion au port')
 })
 
